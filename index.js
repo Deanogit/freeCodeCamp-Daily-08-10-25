@@ -19,15 +19,18 @@ function goldilocksZone(mass) {
   console.log(lum);
 
   // Start of zone
-  const start = 0.95 * lum;
+  const start = Math.sqrt(lum) * 0.95;
   console.log(start);
 
   // End of zone
-  const end = 1.37 * lum;
+  const end = Math.sqrt(lum) * 1.37;
   console.log(end);
 
   // two decimals
-  return [start.toFixed(2), end.toFixed(2)];
+  return [
+    Number.parseFloat(start.toFixed(2)),
+    Number.parseFloat(end.toFixed(2)),
+  ];
 
   // return mass;
 }
