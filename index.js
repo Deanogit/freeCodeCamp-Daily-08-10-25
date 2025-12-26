@@ -10,3 +10,26 @@
 // The end of the zone is 1.37 times the square root of its luminosity.
 // Return the distances rounded to two decimal places.
 // For example, given 1 as a mass, return [0.95, 1.37].
+
+function goldilocksZone(mass) {
+  console.log(mass);
+
+  // Luminosity
+  const lum = mass ** 3.5;
+  console.log(lum);
+
+  // Start of zone
+  const start = 0.95 * lum;
+  console.log(start);
+
+  // End of zone
+  const end = 1.37 * lum;
+  console.log(end);
+
+  // two decimals
+  return [start.toFixed(2), end.toFixed(2)];
+
+  // return mass;
+}
+
+goldilocksZone(0.5);
